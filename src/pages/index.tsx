@@ -3,6 +3,7 @@ import Link from 'next/link';
 import api from '@services/http/api.client';
 
 import { GetStaticProps } from 'next';
+import { Code } from '@chakra-ui/react';
 
 export default function Home({ data }) {
     return (
@@ -12,13 +13,12 @@ export default function Home({ data }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="container mx-auto">
-                <main className="">
-                    <code>{JSON.stringify(data)}</code>
+            <div className="container mx-auto h-screen text-center p-20">
+                <main>
+                    <Code>{JSON.stringify(data)}</Code>
 
                     <Link href="/counter">
-                        <div className="text-blue-400 hover:text-blue-600 cursor-pointer">
-                            {' '}
+                        <div className="text-blue-400 hover:text-blue-600 cursor-pointer mt-4">
                             Counter page ↗
                         </div>
                     </Link>
