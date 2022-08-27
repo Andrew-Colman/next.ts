@@ -7,7 +7,7 @@ import Counter from '@features/counter/Counter';
 function CounterPage<NextPage>() {
     return (
         <>
-            <div className="container">
+            <div className="container mx-auto">
                 <Head>
                     <title>Counter</title>
                     <link rel="icon" href="/favicon.ico" />

@@ -44,7 +44,6 @@ npx degit Andrew-Colman/next.ts
 -   `store/` <- redux store (state management)
 -   `pages/` <- app pages (server-side/static rendered)
 -   `pages/api` <- next.js serverless api routes
--   `pages/api/_middleware` <- api routes middleware like: auth, validation
 -   `styles/` <- global styles like: chakra global styles, tailwindcss styles
 -   `services` <- custom http client, db connectors,
 -   `utils/` <- utility scripts like: test-utils, mocks setup, ...
