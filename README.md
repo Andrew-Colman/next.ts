@@ -21,7 +21,7 @@ npx degit Andrew-Colman/next.ts
 -   Typescript ✔️
 -   Chakra-ui ✔️
 -   Tailwindcss (typed) ✔️
--   Redux (toolkit) store ✔️
+-   Zustand (state manager) ✔️
 -   Axios (custom instance) ✔️
 -   easy to re-config ✔️
 -   zero lock-in ✔️
@@ -41,7 +41,7 @@ npx degit Andrew-Colman/next.ts
 -   `features/` <- core app features (state slice, api, components, etc)
 -   `components/` <- reusable components
 -   `hooks/` <- reusable hooks
--   `store/` <- redux store (state management)
+-   `store/` <- store (state management)
 -   `pages/` <- app pages (server-side/static rendered)
 -   `pages/api` <- next.js serverless api routes
 -   `styles/` <- global styles like: chakra global styles, tailwindcss styles
@@ -59,7 +59,6 @@ reaxi can generate everything that apps needs
 -   components `reaxi component`
 -   hooks `reaxi hook`
 -   app features `reaxi feature`
--   store slices (redux) `reaxi slice`
 
 read more about reaxi here
 
@@ -79,8 +78,17 @@ read more about reaxi here
 
 Testing components, just :
 
-```ts
-import { render } from '@utils/test-utils';
+```tsx
+import { setup, screen } from '@utils/test-utils';
+
+test('should test', async () => {
+    //Arrange
+    const { user } = setup(<Component />); // will render component and returns the user event
+    //Act
+    await user.click(....)
+    //Assert
+    expect(screen.get......).toBe(....)
+});
 ```
 
 ### end to end
