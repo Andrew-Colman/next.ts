@@ -13,7 +13,7 @@
 🚀 Production ready Typescript **Next.js** toolchain.
 
 ```sh
-npx degit Andrew-Colman/next.ts
+npx gh-gen next -n my-app-name
 ```
 
 # Overview:
