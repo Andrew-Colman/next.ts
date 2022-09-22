@@ -1,5 +1,5 @@
 import create from 'zustand';
-import { fetchCount } from '@features/counter/counter.api';
+import { counterApi } from '@features/counter/counter.api';
 interface CounterState {
     count: number;
     increment: () => void;
@@ -16,7 +16,7 @@ export const useCounterStore = create<CounterState>((set, get) => ({
     incrementByAmount: (amount: number) =>
         set(state => ({ count: (state.count += amount) })),
     incrementAsync: async (amount: number) => {
-        const { data } = await fetchCount(amount);
+        const { data } = await counterApi.fetchCount(amount);
         set(state => ({ count: (state.count += data) }));
     },
     incrementIfOdd: async (amount: number) => {
