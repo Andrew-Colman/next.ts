@@ -1,9 +1,9 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
 import { global } from './global';
 
 const fonts = { mono: `'Menlo', monospace` };
 
-const theme = extendTheme({
+const theme: ThemeConfig = extendTheme({
     colors: {
         primary: '#005B96',
         secondary: '#1BC5BD',
@@ -14,6 +14,8 @@ const theme = extendTheme({
     styles: {
         global,
     },
+    initialColorMode: "dark",
+    
 });
 
 export default theme;
