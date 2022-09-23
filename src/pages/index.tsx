@@ -4,8 +4,12 @@ import api from '@services/http/api.client';
 
 import { GetStaticProps } from 'next';
 import { Code } from '@chakra-ui/react';
+import DisplayJson from '@components/DisplayJson';
+import { DateResponse } from '@services/http/api.types';
 
-export default function Home({ data }) {
+type HomeProps = { data: DateResponse };
+
+export default function Home({ data }: HomeProps) {
     return (
         <>
             <Head>
@@ -15,7 +19,9 @@ export default function Home({ data }) {
 
             <div className="container mx-auto h-screen text-center p-20">
                 <main>
-                    <Code>{JSON.stringify(data)}</Code>
+                    <Code>
+                        <DisplayJson jsonObject={data} />
+                    </Code>
 
                     <Link href="/counter">
                         <div className="text-blue-400 hover:text-blue-600 cursor-pointer mt-4">
@@ -29,7 +35,7 @@ export default function Home({ data }) {
 }
 
 export const getStaticProps: GetStaticProps = async ctx => {
-    const data = await api.get('/');
+    const data = await api.getDate();
 
     return {
         props: { data },
