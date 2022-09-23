@@ -108,6 +108,10 @@ test('should test', async () => {
 
 with typescript support out of the box
 
+### Install Browsers
+
+`npx playwright install`
+
 #### running
 
 `yarn pw` | `npm run pw`
