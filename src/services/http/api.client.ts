@@ -1,5 +1,5 @@
 import { HttpClientBase } from './http.base';
-import { API_GET_URLS, API_POST_URLS } from './api.types';
+import { API_GET_URLS, API_POST_URLS, DateResponse } from './api.types';
 
 export const API_BASE_URL = process.env.HOST_API_URL;
 
@@ -11,6 +11,8 @@ class ApiRoutes extends HttpClientBase {
     public get = (url: API_GET_URLS) => this.instance.get(url);
     public post = (url: API_POST_URLS, data, config?) =>
         this.instance.post(url, data, config);
+
+    public getDate = () => this.instance.get<DateResponse>('/'); //example
 
     public increaseCounter = (amount: number) =>
         this.instance.post('/counter', { amount }); //example

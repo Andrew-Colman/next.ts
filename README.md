@@ -2,7 +2,7 @@
 
 <div align="center">
 <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2023">
-<img alt="alpha" src="https://img.shields.io/badge/alpha---?&color=blue">
+<!-- <img alt="alpha" src="https://img.shields.io/badge/alpha---?&color=blue"> -->
 <!-- [<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/Andrew-Colman/next.ts/Node.js%20CI">](../../actions) -->
 
 </div>
@@ -16,12 +16,23 @@
 npx gh-gen next -n my-app-name
 ```
 
+options:
+
+`-n | --name <name>`: your app name
+
+<!--
+TODO add on demand features
+like --use "prisma,auth,actions"
+requires: gh-gen feature
+ -->
+
 # Overview:
 
 -   Typescript ✔️
 -   Chakra-ui ✔️
 -   Tailwindcss (typed) ✔️
 -   Zustand (state manager) ✔️
+-   React-Query Client (Powerful asynchronous state management for TS/JS, React) ✔️
 -   Axios (custom instance) ✔️
 -   easy to re-config ✔️
 -   zero lock-in ✔️
@@ -123,7 +134,7 @@ test('basic test', async ({ page }) => {
 
 > you can change to cypress easily: `yarn add cypress -D && npx cypress`
 
-## bring it even further:
+## Bring it even further:
 
 > dozens of next.ts projects with a yarn workspace configuration
 
@@ -141,4 +152,4 @@ collecting experience and best practices
 
 ## Who ?
 
-for: **developers** or **teams** that create a lot of projects and want a sweet developer experience with a complete next.js toolchain ready for production deployment
+for: **developers** / **teams** that create a lot of projects and want a sweet developer experience with a complete next.js toolchain ready for production deployment
