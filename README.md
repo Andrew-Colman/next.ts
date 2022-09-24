@@ -81,7 +81,7 @@ read more about reaxi here
 
 ## TESTS !!!
 
-### unit / integration
+### Unit / Integration
 
 -   [jest](https://jestjs.io/)
 -   [testing library react](https://testing-library.com/docs/react-testing-library/intro/)
@@ -102,29 +102,42 @@ test('should test', async () => {
 });
 ```
 
-### end to end
+### End to End
 
 -   [playwright](https://playwright.dev/docs/why-playwright) runs end-to-ends test in real browsers: chromium, firefox, webkit ( all in parallel)
 
-with typescript support out of the box
+-   with typescript support out of the box
+-   desktop and mobile browsers
 
-### Install Browsers
+#### Install Browsers
 
 `npx playwright install`
 
-#### running
+#### Running
 
+run tests:
 `yarn pw` | `npm run pw`
 
-#### tests location
+debug: (will open browser)
+`yarn pw:ui` | `npm run pw:ui`
+
+#### Test generator
+
+Playwright comes with the ability to generate tests out of the box and is a great way to quickly get started with testing. It will open two windows, a browser window where you interact with the website you wish to test and the Playwright Inspector window where you can record your tests, copy the tests, clear your tests as well as change the language of your tests.
+
+`yarn pw:gen` | `npm run pw:gen`
+
+> make sure to be running the `dev` server
+
+#### Tests location
 
 `tests/`
 
-#### configuration
+#### Configuration
 
 [playwright.config.ts](./playwright.config.ts)
 
-#### example test with playwright
+#### Example test with playwright
 
 ```ts
 import { test, expect } from '@playwright/test';
