@@ -9,7 +9,9 @@
         "test:api": "jest ./src/pages/api",
         "test:components": "jest ./src/components",
         "test:features": "jest ./src/features",
-        "pw": "playwright test"
+        "pw": "playwright test",
+        "pw:ui": "playwright test --debug",
+        "pw:gen": "playwright codegen localhost:3000"
     },
     "dependencies": {
         "@chakra-ui/icons": "^2.0.8",
