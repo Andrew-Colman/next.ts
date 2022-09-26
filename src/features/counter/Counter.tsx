@@ -42,7 +42,7 @@ function Counter() {
                         +
                     </button>
                 </div>
-                <div className="counter__row">
+                <div className="counter__row row__2">
                     <input
                         className="counter__textbox"
                         aria-label="Set increment amount"
@@ -139,6 +139,13 @@ function Counter() {
                     width: 0%;
                     opacity: 1;
                     transition: 0s;
+                }
+
+                @media (max-width: 768px) {
+                    .counter__row.row__2 {
+                        flex-direction: column;
+                        gap: 1rem;
+                    }
                 }
             `}</style>
         </>
